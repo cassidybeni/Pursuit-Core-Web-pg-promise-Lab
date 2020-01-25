@@ -4,8 +4,8 @@ const app = express();
 const port = 3000;
 const bodyParser = require('body-parser');
 
-const usersRouter = require('./routes/users');
-const postsRouter = require('./routes/posts');
+const usersRouter = require('./routes/posts/users/users.js');
+const postsRouter = require('./routes/posts/posts.js');
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));

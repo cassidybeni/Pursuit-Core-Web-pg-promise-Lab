@@ -1,10 +1,9 @@
   
 var express = require('express');
 var router = express.Router();
+const {getAllPosts} = require("../../queries/posts")
 
-router.get('/all', (req, res) => {
-  res.send('Sending all posts!');
-});
+router.get('/all', getAllPosts) 
 
 router.get('/:user_id', (req, res) => {
   res.send('Sending all post from this user!');
